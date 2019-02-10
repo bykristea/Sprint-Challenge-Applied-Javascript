@@ -4,7 +4,7 @@ class Carousel {
         this.carousel = carousel;
         this.leftButton = this.carousel.querySelector('.left-button');
         this.rightButton = this.carousel.querySelector('.right-button');
-        this.images = this.carousel.querySelectorAll('img')
+        this.images = this.carousel.querySelectorAll('img');
 
         let carouselIndex = 0;
         this.carouselIndex = carouselIndex;
@@ -17,7 +17,6 @@ class Carousel {
 
      selectLeft(index) {
          this.images[this.carouselIndex].style.display = 'none';
-        //  this.images[this.carouselIndex].style.opacity = '0';
          if (this.carouselIndex <= 0) {this.carouselIndex = this.images.length}
          this.carouselIndex--;
          this.images[this.carouselIndex].style.display = 'flex';
