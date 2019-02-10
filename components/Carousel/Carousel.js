@@ -21,10 +21,11 @@ class Carousel {
          if (this.carouselIndex <= 0) {this.carouselIndex = this.images.length}
          this.carouselIndex--;
          this.images[this.carouselIndex].style.display = 'flex';
+         this.images[this.carouselIndex].classList.add('fade-in');
+
      }
      selectRight(index) {
          this.images[this.carouselIndex].style.display = 'none';
-        //  this.images[this.carouselIndex].style.opacity = '1';
          if (this.carouselIndex >= this.images.length-1) {this.carouselIndex = -1}
          this.carouselIndex++;
          this.images[this.carouselIndex].style.display = 'flex';
